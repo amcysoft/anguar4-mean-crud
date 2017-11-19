@@ -14,7 +14,7 @@ exports = module.exports = function(app) {
 	
 	app.models = {};
 	// Start: Autoload all the models in models folder
-	fs.readdirSync(__dirname + '/server/models').forEach(file => {
+	fs.readdirSync(__dirname + '/models').forEach(file => {
 		var f = file.replace('.js', '');
 		if(f != 'models') {
 			var cap = f.charAt(0).toUpperCase() + f.slice(1);
@@ -24,7 +24,7 @@ exports = module.exports = function(app) {
 	// End: Autoload all the models in models folder
 
 	// Start: Autoload all the server API routes
-	fs.readdirSync(__dirname + '/server/routes').forEach(file => {
+	fs.readdirSync(__dirname + '/routes').forEach(file => {
 		var f = file.replace('.js', '');
 		if(f != 'router') {
 			app.use('/api/'+f, require('./routes/'+f)(app));
