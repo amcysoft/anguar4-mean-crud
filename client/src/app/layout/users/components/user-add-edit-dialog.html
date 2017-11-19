@@ -1,0 +1,26 @@
+<h2 mat-dialog-title>{{ action }} User</h2>
+<form #myForm="ngForm" novalidate>
+  <div mat-dialog-content>
+    <alert></alert>
+
+    <div class="form-group">
+      <input type="text" matInput [(ngModel)]="data.first_name" name="first_name" placeholder="First Name" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <input type="text" matInput [(ngModel)]="data.last_name" name="last_name" placeholder="Last Name" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <input type="text" [(ngModel)]="data.username" name="username" placeholder="Username" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <input type="email" matInput [(ngModel)]="data.email" name="email" email placeholder="Email" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <input type="password" matInput [(ngModel)]="data.password" name="password" [required]="action=='Add'" placeholder="Password" class="form-control">
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button mat-button [mat-dialog-close]="" class="btn btn-secondary">Cancel</button>
+    <button class="btn btn-primary" (click)="submit()" [disabled]="myForm.invalid" type="submit">{{ action }}</button>
+  </div>
+</form>

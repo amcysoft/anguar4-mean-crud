@@ -1,0 +1,35 @@
+<div [@routerTransition]>
+	<app-page-header [heading]="'Todo Lists'" [icon]="'fa-th-list'"></app-page-header>
+
+	<div class="card mb-3">
+		<div class="card-header">
+			<i class="fa fa-th-list"></i> Todo Lists
+		</div>
+		<div class="card-body mat-elevation-z8">
+			<div class="card-block table-responsive">
+				<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-bordered" id="dataTable" width="100%"
+				 cellspacing="0">
+					<thead>
+						<tr>
+							<th>Title</th>
+							<th>Description</th>
+							<th>Date</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let todo of todos">
+							<td>{{ todo.title }}</td>
+							<td>{{ todo.description }}</td>
+							<td>{{ todo.date | date }}</td>
+							<td>
+								<button type="button" (click)="edit(todo)" class="btn btn-primary">Edit</button>
+								<button type="button" (click)="delete(todo)" class="btn btn-danger">Delete</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

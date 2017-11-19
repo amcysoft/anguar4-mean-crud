@@ -1,0 +1,37 @@
+<div [@routerTransition]>
+	<app-page-header [heading]="'Users'" [icon]="'fa-user'"></app-page-header>
+
+	<div class="card mb-3">
+		<div class="card-header">
+			<i class="fa fa-user"></i> Users
+		</div>
+		<div class="card-body mat-elevation-z8">
+			<div class="card-block table-responsive">
+				<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-bordered" id="dataTable" width="100%"
+				 cellspacing="0">
+					<thead>
+						<tr>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Username</th>
+							<th>Email</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let user of users">
+							<td>{{ user.first_name }}</td>
+							<td>{{ user.last_name }}</td>
+							<td>{{ user.username }}</td>
+							<td>{{ user.email }}</td>
+							<td>
+								<button type="button" (click)="edit(user)" class="btn btn-primary">Edit</button>
+								<button type="button" (click)="delete(user)" class="btn btn-danger">Delete</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

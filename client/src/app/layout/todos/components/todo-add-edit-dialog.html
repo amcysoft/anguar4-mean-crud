@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>{{ action }} Todo</h2>
+<form #myForm="ngForm" novalidate>
+  <div mat-dialog-content>
+    <alert></alert>
+
+    <div class="form-group">
+      <input type="text" matInput [(ngModel)]="data.title" name="title" placeholder="Title" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <textarea matInput [(ngModel)]="data.description" name="description" placeholder="Description" class="form-control" required></textarea>
+    </div>
+    <div class="form-group">
+      <input matInput type="date" [ngModel]="data.date | date:'yyyy-MM-dd'" (ngModelChange)="data.date = $event" name="date" placeholder="Date" class="form-control" required>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button mat-button [mat-dialog-close]="" class="btn btn-secondary">Cancel</button>
+    <button class="btn btn-primary" (click)="submit()" [disabled]="myForm.invalid" type="submit">{{ action }}</button>
+  </div>
+</form>

@@ -1,0 +1,99 @@
+{
+  "name": "angular4-mean-crud",
+  "version": "1.0.0",
+  "description": "This is a MEAN Stack project with register/login alongwith CRUD Sample built with Angular 4 on frontend and expressJS with MongoDB as backend.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amcysoft/angular4-mean-crud.git"
+  },
+  "keywords": [
+    "Angular",
+    "Angular4",
+    "MEAN Stack",
+    "MongoDB",
+    "NodeJS",
+    "ExpressJS",
+    "CRUD"
+  ],
+  "author": "Amcysoft <support@amcysoft.com>",
+  "contributors": [
+    "Raheel Shahzad <raheel_shahzad@live.com>"
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/amcysoft/angular4-mean-crud/issues"
+  },
+  "homepage": "https://github.com/amcysoft/angular4-mean-crud#readme",
+  "scripts": {
+    "ng": "ng",
+    "start": "node ./server/bin/www",
+    "server": "nodemon server/bin/www --watch server --watch app.js",
+    "dev": "ng serve --proxy-config ./client/proxy.config.json",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "dependencies": {
+    "@angular/animations": "^4.2.4",
+    "@angular/cdk": "^2.0.0-beta.12",
+    "@angular/common": "^4.2.4",
+    "@angular/compiler": "^4.2.4",
+    "@angular/core": "^4.2.4",
+    "@angular/forms": "^4.2.4",
+    "@angular/http": "^4.2.4",
+    "@angular/material": "^2.0.0-beta.12",
+    "@angular/platform-browser": "^4.2.4",
+    "@angular/platform-browser-dynamic": "^4.2.4",
+    "@angular/router": "^4.2.4",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.5",
+    "angular-datatables": "^4.4.1",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "core-js": "^2.4.1",
+    "datatables.net": "^1.10.16",
+    "datatables.net-buttons": "^1.4.2",
+    "datatables.net-buttons-dt": "^1.4.2",
+    "datatables.net-dt": "^1.10.16",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "font-awesome": "4.7.0",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.12.4",
+    "morgan": "~1.9.0",
+    "ngx-loading": "^1.0.8",
+    "passport": "^0.4.0",
+    "passport-google-oauth2": "^0.1.6",
+    "passport-local-mongoose": "^4.4.0",
+    "rxjs": "^5.4.2",
+    "serve-favicon": "~2.4.5",
+    "zone.js": "^0.8.14"
+  },
+  "devDependencies": {
+    "@angular/cli": "1.4.9",
+    "@angular/compiler-cli": "^4.2.4",
+    "@angular/language-service": "^4.2.4",
+    "@types/bootstrap": "^3.3.36",
+    "@types/datatables.net": "^1.10.7",
+    "@types/jasmine": "~2.5.53",
+    "@types/jasminewd2": "~2.0.2",
+    "@types/jquery": "^3.2.15",
+    "@types/node": "~6.0.60",
+    "codelyzer": "~3.2.0",
+    "jasmine-core": "~2.6.2",
+    "jasmine-spec-reporter": "~4.1.0",
+    "karma": "~1.7.0",
+    "karma-chrome-launcher": "~2.1.1",
+    "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^1.2.1",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "protractor": "~5.1.2",
+    "ts-node": "~3.2.0",
+    "tslint": "~5.7.0",
+    "typescript": "~2.3.3"
+  }
+}

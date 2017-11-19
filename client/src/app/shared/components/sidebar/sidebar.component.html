@@ -1,0 +1,13 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+    <ul class="list-group">
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Dashboard' }}
+        </a>
+        <a routerLink="/users" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-user"></i>&nbsp;{{ 'Users' }}
+        </a>
+        <a routerLink="/todos" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-th-list"></i>&nbsp;{{ 'Todo Lists' }}
+        </a>
+    </ul>
+</nav>

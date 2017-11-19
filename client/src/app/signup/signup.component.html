@@ -1,0 +1,38 @@
+<ngx-loading [show]="loading"></ngx-loading>
+<div class="login-page" [@routerTransition]>
+    <div class="row">
+        <div class="col-md-4 push-md-4">
+            <img class="user-avatar" src="assets/images/logo.png" width="150px" />
+            <h1>Angular4-MEAN-CRUD</h1>
+            <form #signupForm="ngForm" role="form" novalidate>
+                <alert></alert>
+                <div class="form-content">
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="registerData.first_name" name="first_name" class="form-control input-underline input-lg"
+                            placeholder="First Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="registerData.last_name" name="last_name" class="form-control input-underline input-lg" placeholder="Last Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="registerData.username" name="username" class="form-control input-underline input-lg" placeholder="Username"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" email [(ngModel)]="registerData.email" name="email" class="form-control input-underline input-lg" placeholder="Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" [(ngModel)]="registerData.password" name="password" class="form-control input-underline input-lg"
+                            placeholder="Password" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn rounded-btn" [disabled]="signupForm.invalid" (click)="register()"> Register </button>&nbsp;
+                <a class="btn rounded-btn" [routerLink]="['/login']"> Log in </a>
+            </form>
+        </div>
+    </div>
+</div>
